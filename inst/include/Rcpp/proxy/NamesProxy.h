@@ -40,7 +40,7 @@ public:
         template <typename T> operator T() const;
 
     private:
-        CLASS& parent;
+        CLASS& parent; // should have get__(), set__(X), size() , X <- Something that Shield<SEXP> can be converted into
 
         SEXP get() const {
             return RCPP_GET_NAMES(parent.get__()) ;
